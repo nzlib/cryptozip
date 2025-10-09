@@ -116,7 +116,7 @@ const { zip, unzip } = require('czib');
 
 ## Testing Program
 
-```
+```javascript
 const { zip, unzip } = require('czib');
 const fs = require('fs').promises;
 
