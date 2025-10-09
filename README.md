@@ -5,7 +5,7 @@ const { zip, unzip } = require('czib');
 const fs = require('fs').promises;
 
 async function test() {
-  console.log('Starting czib.js tests...\n');
+  console.log('Starting czib tests...\n');
 
   // Test 1: In-memory compression and encryption
   try {
