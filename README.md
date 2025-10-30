@@ -1,4 +1,4 @@
-# crytozip.js
+# cryptozip.js
 
 A lightweight Node.js utility for **compressing** and **encrypting** files or buffers — and for **decompressing** and **decrypting** them later.  
 It wraps Node’s native `zlib` and `crypto` modules to provide a simple async API for secure, stream-based ZIP operations.
@@ -18,10 +18,10 @@ It wraps Node’s native `zlib` and `crypto` modules to provide a simple async A
 ## 📦 Installation
 
 ```bash
-npm install crytozip
+npm install cryptozip
 ```
 
-*(Or just copy `crytozip.js` into your project if you prefer a standalone file.)*
+*(Or just copy `cryptozip.js` into your project if you prefer a standalone file.)*
 
 ---
 
@@ -30,7 +30,7 @@ npm install crytozip
 ### Import
 
 ```js
-const { zip, unzip } = require('./crytozip');
+const { zip, unzip } = require('./cryptozip');
 ```
 
 ---
@@ -42,7 +42,7 @@ Compress a string or file, optionally with a password.
 #### Example 1 — In-memory compression with password
 
 ```js
-const { zip } = require('./crytozip');
+const { zip } = require('./cryptozip');
 
 (async () => {
   const data = 'Hello Secure World!';
@@ -65,7 +65,7 @@ await zip({ file: 'input.txt' }, { password: 'mypwd', outputFile: 'output.gzenc'
 #### Example 1 — In-memory decryption
 
 ```js
-const { unzip } = require('./crytozip');
+const { unzip } = require('./cryptozip');
 
 (async () => {
   const decrypted = await unzip(zipped, { password: 'mySecret123' });
@@ -118,7 +118,7 @@ await unzip({ file: 'output.gzenc' }, { password: 'mypwd', outputFile: 'restored
 You can quickly test it in Node REPL or add a simple CLI:
 
 ```bash
-node -e "const {zip, unzip}=require('./crytozip');(async()=>{await zip({file:'a.txt'},{password:'123',outputFile:'a.gzenc'})})();"
+node -e "const {zip, unzip}=require('./cryptozip');(async()=>{await zip({file:'a.txt'},{password:'123',outputFile:'a.gzenc'})})();"
 ```
 
 ---
